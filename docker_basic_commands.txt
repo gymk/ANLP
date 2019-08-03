@@ -1,0 +1,50 @@
+### Basic uses of Docker ###
+----------------------------
+
+- Most important commands:
+docker container
+docker image
+docker run
+
+- List images and containers
+docker image ls
+docker container ls
+
+- Run the hello-world image
+docker run hello-world
+
+- Run a baisc Python file
+docker run \
+	-v $(pwd):/src \
+	--rm \
+	python:3 \
+	python /src/hello-world.py
+	
+- Listing all containers:
+docker container ls -a
+
+- Removing/Stopping a container:
+docker container stop/rm CONTAINER_NAME
+
+- Removing all containers:
+docker container rm $(docker ps -a -q)
+
+- Running the Python interpreter:
+docker run \
+	-it \
+	--rm \
+	python:3 \
+
+- Running the Bash Shell:
+docker run \
+	-it \
+	--rm \
+	python:3 \
+	/bin/bash
+	
+- Running nodeJS:
+docker run \
+	-it \
+	--rm \
+	node:latest \
+	/bin/bash
