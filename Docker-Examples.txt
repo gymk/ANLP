@@ -1,0 +1,32 @@
+### Other Examples of Docker in Action ###
+------------------------------------------
+
+- Running a MySQL Container
+docker run \
+	--rm \
+	-d \
+	--name my_sql \
+	-e MYSQL_ROOT_PASSWORD=some-pwd \
+	mysql:latest
+	
+- Logging into the container and into the mysql console
+docker exec \
+	-it \
+	my_mysql \
+	mysql -h localhost -u root -p
+
+- Running an Nginx Container serving some html
+docker run \
+	--rm \
+	-d \
+	-v $(pwd):/usr/share/nginx/html \
+	-p 80:80 \
+	--name my_nginx \
+	nginx:latest
+	
+- Logging into the container and looking around using bash
+docker exec \
+	-it \
+	my_nginx \
+	/bin/bash
+
