@@ -1,0 +1,26 @@
+### Dockerfile ###
+------------------
+
+- Adding a Python package:
+
+FROM python:3
+
+RUN pip3 install numpy
+
+----
+docker build \
+	-t py_numpy \
+	.
+	
+- Having some fund with Ubuntu:
+
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get -y install fortune cowsayls
+
+CMD /usr/games/fortune | /usr/games/cowsay
+
+----
+docker build \
+	-t ubuntu_fun \
+	.
