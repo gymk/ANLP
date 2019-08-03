@@ -1,0 +1,63 @@
+### Docker Compose Scaling ###
+------------------------------
+
+- Python Web Server
+import socket
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+	return "Hello! My containe is named: " + socket.gethostname()
+	
+- Nginx Configuration File
+upstream serv {
+	server docker-scaling_flash_1:5000
+	server docker-scaling_flash_2:5000
+	server docker-scaling_flash_3:5000
+	server docker-scaling_flash_4:5000
+	server docker-scaling_flash_5:5000
+	server docker-scaling_flash_6:5000
+	server docker-scaling_flash_7:5000
+	server docker-scaling_flash_8:5000
+	server docker-scaling_flash_9:5000
+	server docker-scaling_flash_10:5000
+	server docker-scaling_flash_11:5000
+	server docker-scaling_flash_12:5000
+}
+
+server {
+	listen 80;
+	location / {
+		proxy_pass http://serv;
+	}
+}
+
+- docker-compose.yml file
+version: '3'
+services:
+  flask:
+    build: .
+    volumes:
+	  - ./py:/src
+	environment:
+	  - FLASH_APP=/src/app.py
+  nginx:
+    image: nginx:latest
+	ports:
+	  - "2000:80"
+	volumes:
+	  - ./nginx:/etc/nginx/conf.d
+	depends_on:
+	  - flask
+
+- Dockerfile
+FROM python:3
+
+RUN pip3 install flask
+
+CMD flask run --host=0.0.0.0
+
+
+- Command to run
+docker-compose up --scale flask=12
