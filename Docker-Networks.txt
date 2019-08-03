@@ -1,0 +1,51 @@
+### Docker Networks ###
+-----------------------
+
+- Create a network
+docker network create net_1
+
+- Add a container to a network
+docker run \
+	--rm \
+	-d \
+	--net net_1 \
+	--name my_py \
+	-v $(pwd):/src \
+	python:3 \
+	python3 /src/run.py
+	
+- Add a second container to the network
+docker run \
+	--rm \
+	-it \
+	--net net_1 \
+	node:latest \
+	/bin/bash
+	
+- Remove a network
+docker network rm net_1
+
+- Create a new network
+docker network create net_2
+
+- Add a mysql container to the network
+docker run \
+	--rm \
+	-d \
+	-e MYSQL_ROOT_PASSWORD=abc123 \
+	--name my_mysql \
+	--net net_2 \
+	mysql:latest
+	
+- Add a second mysql container to the network
+- and connect to the first one from it
+docker run \
+	-it \
+	--rm \
+	-e MYSQL_ROOT_PASSWORD=abc123 \
+	--name my_mysql2 \
+	--net net_2 \
+	mysql:latest \
+	/bin/bash
+	
+mysql -h my_mysql -u root -p
