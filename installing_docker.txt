@@ -1,0 +1,53 @@
+### Installing Dockerr ###
+--------------------------
+
+- Make sure no components of docker are on the machine
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+- Update package list
+sudo apt-get update
+
+- Install support software
+sudo apt-get install \
+	apt-transport-https \
+	ca-certificates \
+	curl \
+	gnupg-agent \
+	software-properties-common
+	
+- Install Docker's official GPG key
+curl -fsS: https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+- Verify we got the right key
+sudo apt-key fingerprint 0E8FC088
+
+- Add the stable repository
+sudo add-apt-repository \
+	"deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+	$(lsb_release -cs) \
+	stable"
+	
+- Update package list
+sudo apt-get update
+
+- Install docker
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+
+### Post Installation Steps ###
+-------------------------------
+
+- Create Docker User Group
+sudo groupadd docker
+
+- Add the current user to the user group
+sudo usermod -aG docker $USER
+
+- Configure docker to run on boot - systemd
+sudo systemctl enable docker
+
+- Log out and log back in to re-evaluate user group
+If logout/login didn't work reboot the system
+
+- Test everything is working
+docker run hello-world
