@@ -63,3 +63,22 @@ Andriy Mnih and Geoffrey Hinton. “A Scalable Hierarchical Distributed Language
 Frederic Morin and Yoshua Bengio. “Hierarchical probabilistic neural network language model.” In: Aistats. Vol. 5. Citeseer. 2005, pp. 246–252.
 Kishore Papineni et al. “Bleu: a Method for Automatic Evaluation of Machine Translation”. In: Proceedings of 40th Annual Meeting of the Association for Computational Linguistics. Philadelphia, Pennsylvania, USA: Association for Computational Linguistics, July 2002, pp. 311–318. 
 ```
+
+----
+
+# Week 1
+
+| S.I |                 File                 |          Details          |
+|-----|:------------------------------------:|:-------------------------:|
+| 1   | Week1_Assignment.ipynb, Week1_Assignment.pdf | Week 1 Self-Assignments |
+
+
+
+----
+
+# Week 2
+
+| S.I |                 File                 |          Details          |
+|-----|:------------------------------------:|:-------------------------:|
+| 1   | Week2_Exercise_Shakespear Play.ipynb | Week 2 Lecture 2 Exercise |
+----
