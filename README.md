@@ -61,24 +61,23 @@ Edward Loper and Steven Bird. “NLTK: The Natural Language Toolkit”, In: Proc
 Tomas Mikolov et al. “Distributed Representations of Words and Phrase and Their Compositionality”. In: Proceedings of the 26th International Conference on Neural Information Processing Systems - Volume 2. NIPS’13.Lake Tahoe, Nevada: Curran Associates Inc., 2013, pp. 3111–3119.
 Andriy Mnih and Geoffrey Hinton. “A Scalable Hierarchical Distributed Language Model”. In: Proceedings of the 21st International Conference on Neural Information Processing Systems. NIPS’08. Vancouver, British Columbia, Canada: Curran Associates Inc., 2008, pp. 1081–1088. isbn:978-1-6056-0-949-2.
 Frederic Morin and Yoshua Bengio. “Hierarchical probabilistic neural network language model.” In: Aistats. Vol. 5. Citeseer. 2005, pp. 246–252.
-Kishore Papineni et al. “Bleu: a Method for Automatic Evaluation of Machine Translation”. In: Proceedings of 40th Annual Meeting of the Association for Computational Linguistics. Philadelphia, Pennsylvania, USA: Association for Computational Linguistics, July 2002, pp. 311–318. 
+Kishore Papineni et al. “Bleu: a Method for Automatic Evaluation of Machine Translation”. In: Proceedings of 40th Annual Meeting of the Association for Computational Linguistics. Philadelphia, Pennsylvania, USA: Association for Computational Linguistics, July 2002, pp. 311–318.
 ```
 
 ----
 
-# Week 1
+## Week 1
 
 | S.I |                 File                 |          Details          |
 |-----|:------------------------------------:|:-------------------------:|
 | 1   | Week1_Assignment.ipynb, Week1_Assignment.pdf | Week 1 Self-Assignments |
 
-
-
 ----
 
-# Week 2
+## Week 2
 
 | S.I |                 File                 |          Details          |
 |-----|:------------------------------------:|:-------------------------:|
 | 1   | Week2_Exercise_Shakespear Play.ipynb | Week 2 Lecture 2 Exercise |
+
 ----
