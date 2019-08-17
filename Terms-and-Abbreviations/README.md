@@ -34,12 +34,13 @@ Probability can be expressed as
 ### Probability in NLP
 
 #### Why Probability used in NLP
+
 - Probability will be used in estimating what could be the next word in the sentence
 - Provides methods to predict or make decisions to pick the next word in the sequence based on sampled data
 - Make the informed decision when there is a certain degree of uncertainty and some observed data
-    - Example: How * you?
-    - Finding all the possible words that might appeat in between How and you
-    - To get an understanding, see Google NGram Viewer
+  - Example: How * you?
+  - Finding all the possible words that might appeat in between How and you
+  - To get an understanding, see Google NGram Viewer
 - It provides a quantitative description of the chances or likelihood's associated with various outcomes
 
 #### How Probability used in NLP
@@ -50,52 +51,55 @@ Probability can be expressed as
             - Likelihood of the next word is formalized through an observation by conducting experiment - counting the words in a document
 
 #### Discrete Sample Space
+
 - Consider the following Bag of Words (_count = 52_)
-    - Experiment
-        - Extracting tokens from a document
-    - Outcome
-        - Every token/word in _x_ in the document
-    - Sample Document
-        - A weather balloon is floating at a constant height above Earth when it releases a pack of instruments. (Level 1) a. If the pack hits the ground with a downward velocity of −73.5 m/s, how far did the pack fall? b. Calculate the distance the ball has rolled at the end of 2.2 s 
+  - Experiment
+    - Extracting tokens from a document
+  - Outcome
+    - Every token/word in _x_ in the document
+  - Sample Document
+    - A weather balloon is floating at a constant height above Earth when it releases a pack of instruments. (Level 1) a. If the pack hits the ground with a downward velocity of −73.5 m/s, how far did the pack fall? b. Calculate the distance the ball has rolled at the end of 2.2 s 
 - The outcome of the experiment - 52 sample (words).
-    - They constitute the _sample space_, $\Omega$ or the set of all possible outcomes
-        - $\Omega$ = 'a', 'weather', 'balloon', 'is', 'floating', 'at', 'a', 'constant', 'height', 'above', 'earth', 'when', 'it', 'releases', 'a', 'if', 'the', 'pack', 'hits', 'the', 'ground', 'with', 'a', 'downard', 'velocity', 'of', 'm', 's', 'how', 'far', 'did', 'the', 'pack', 'fall', 'b', 'calculate', 'the', 'distance', 'the', 'ball', 'has', 'rolled', 'at', 'the', 'end', 'of', 's'
+  - They constitute the _sample space_, $\Omega$ or the set of all possible outcomes
+    - $\Omega$ = 'a', 'weather', 'balloon', 'is', 'floating', 'at', 'a', 'constant', 'height', 'above', 'earth', 'when', 'it', 'releases', 'a', 'if', 'the', 'pack', 'hits', 'the', 'ground', 'with', 'a', 'downard', 'velocity', 'of', 'm', 's', 'how', 'far', 'did', 'the', 'pack', 'fall', 'b', 'calculate', 'the', 'distance', 'the', 'ball', 'has', 'rolled', 'at', 'the', 'end', 'of', 's'
 - Each word in this sample belongs to $\Omega$, represented by $x \in \Omega$
 - Eacm sample $x \in \Omega$ is assigned a probability score $[ 0, 1 ]$
 
 #### Probability Mass Function
+
 - Probability Function | Probability Distribution Function
-    - A _probability function_ or _probability distribution function_ distributes the probability mass of $1$ to the all the samples in the sample space $\Omega$
+  - A _probability function_ or _probability distribution function_ distributes the probability mass of $1$ to the all the samples in the sample space $\Omega$
 
 #### Sample Space Constraints
+
 - All the words in the $\Omega$, must satisfy the following constraints:
-    1. $P(x) \in [0,1], for all x \in \Omega$
-    2. $\sum_{x \in \Omega} P(x) = 1$
+  1. $P(x) \in [0,1], for all x \in \Omega$
+  2. $\sum_{x \in \Omega} P(x) = 1$
 
 #### Events
 
 - Events can be described as a variable taking a certain value
 - An __*Event*__ is a collection of samples of the same type, $E \subseteq \Omega$
-    - $P(E) = \sum_{x \in E} P(x)$
+  - $P(E) = \sum_{x \in E} P(x)$
 - Example
-    - Consider above sample document
-        - Total number of words = 52.
-        - The number of _uniqye_ words = 37 or there are 37 __*types*__ of words in this BOW.
-        - 15 words have frequencies $> 1$.
+  - Consider above sample document
+    - Total number of words = 52.
+    - The number of _uniqye_ words = 37 or there are 37 __*types*__ of words in this BOW.
+    - 15 words have frequencies $> 1$.
 
 #### Random Variable
 
 - A __random variable__[8], is a variable whose possible values are numerical outcomes of a random experiment
 - Two types of random variable
-    - Continuous
-    - Discrete
+  - Continuous
+  - Discrete
 - For NLP, it will be __*Discrete*__
 
 - To capture Type-Token distinction, we use random variable $W$.
-    - $W(x)$ maps to the sample $x \in \Omega$
+  - $W(x)$ maps to the sample $x \in \Omega$
 - $V$ is the set of types and the value is represented by a variable $v$
 - Given a random variable $V$ and a value $v$, $P(V = v)$ is the probability of the event that $V$ takes the value $v$, i.e: $P(V = v) = P(x \in \Omega: V(x) = v)$
-    - Example: $P(V = 'the') = P('the') = 0.115$
+  - Example: $P(V = 'the') = P('the') = 0.115$
 
 ----
 
@@ -117,10 +121,9 @@ Probability can be expressed as
 
 [8] http://www.stats.gla.ac.uk/steps/glossary/probability_distributions.html
 
-
 - Markdown Symbols Help
-    - <https://www.calvin.edu/~rpruim/courses/s341/S17/from-class/MathinRmd.html>
-    - <https://csrgxtu.github.io/2015/03/20/Writing-Mathematic-Fomulars-in-Markdown/>
-    - <https://github.com/Jam3/math-as-code/blob/master/README.md>
+  - <https://www.calvin.edu/~rpruim/courses/s341/S17/from-class/MathinRmd.html>
+  - <https://csrgxtu.github.io/2015/03/20/Writing-Mathematic-Fomulars-in-Markdown/>
+  - <https://github.com/Jam3/math-as-code/blob/master/README.md>
 
 ----
