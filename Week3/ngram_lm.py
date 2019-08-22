@@ -9,11 +9,12 @@ using Bigram and Trigram
 """
 
 class NGramLM:
-    def __init__(self, corpus, ss=True, es=True):
+    def __init__(self, corpus, ss=True, es=True, start_stop_count=1):
         """
         corpus: List having sentences as documents
         ss : flag to include start symbol <S> in the document
         es: flag to include end symbol </S> in the document
+        start_stop_count: Number of start, stop symbols to add in each document
         
         OOV not considered yet
         
@@ -24,6 +25,7 @@ class NGramLM:
         """
         self.ss = ss
         self.es = es
+        self.start_stop_count = start_stop_count
         self.corpus = corpus
         self.printCorpus()
         self.printTokens()
@@ -68,9 +70,11 @@ class NGramLM:
         """
         tokens = [word.lower() for word in sent.split() if word.isalpha()]
         if self.ss:
-            tokens.insert(0, "<S>")
+            for i in range(self.start_stop_count):
+                tokens.insert(0, "<S>")
         if self.es:
-            tokens.append("<\S>")
+            for i in range(self.start_stop_count):
+                tokens.append("<\S>")
         return tokens
     
     def computePMF(self):
@@ -118,6 +122,7 @@ class NGramLM:
         # Build bigram model
         for sent in self.corpus:
             tokens = self.preProcessSentence(sent)
+            print(tokens)
             for w1,w2,w3 in trigrams(tokens):
                 self.ngrams_model[(w1, w2)][w3] += 1
         #pprint(self.ngrams_model)
