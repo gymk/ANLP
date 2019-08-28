@@ -18,7 +18,7 @@
     - [3.2.1. D-Decision Boundary for OR Gate](#321-d-decision-boundary-for-or-gate)
     - [3.2.2. D-Decision Boundary for AND Gate](#322-d-decision-boundary-for-and-gate)
     - [3.2.3. Decision Boundary for Sentiments - NLP](#323-decision-boundary-for-sentiments---nlp)
-    - [3.2.4. Decision Boundary - Variation of $W_J$](#324-decision-boundary---variation-of-wj)
+    - [3.2.4. Decision Boundary - Variation of $$W_J$$](#324-decision-boundary---variation-of-wj)
     - [3.2.5. Decision Boundary - Variation of Bias](#325-decision-boundary---variation-of-bias)
     - [3.2.6. Decision Boundary and Gradient Descent](#326-decision-boundary-and-gradient-descent)
   - [3.3. Exercise - Lineary Separable](#33-exercise---lineary-separable)
@@ -110,8 +110,9 @@
 - From [v1] Week 3, Lec 2
   - __Classification__ is the task of assigning predefine dis-joint categories to objects
   - Example
-    - Detect $\text{Spam emails}$
-    - Find the set of $\text{mobile phones < Rs.10000 and received  $5*$ reviews}$
+    - Detect $$\text{Spam emails}$$
+    - <script type="math/tex">\text{Spam emails}</script>
+    - Find the set of $$\text{mobile phones < Rs.10000 and received  $$5*$$ reviews}$$
       - In these kind of classification NER will be used to extract the features and then classification will be performed over the extracted features
     - Identify the category of the incoming document as Sports, Politics, Entertainment or Business
     - Determine whether a movie review is a Positive of Negative Review
@@ -119,29 +120,29 @@
 ## 2.1. Definition of Classification
 
 - The input is a collection of records
-- Each rechord is represented by a tuple ($x$,$y$)
-- $x=x_1,x_2,...,x_n$ and $y=y_1,y_2,...y_n$ are the input features and the classes respectively
+- Each rechord is represented by a tuple ($$x$$,$y$$)
+- $$x=x_1,x_2,...,x_n$$ and $$y=y_1,y_2,...y_n$$ are the input features and the classes respectively
 - Example
-  - $x \in R^{2}$ is a vector - the of observed variables
-  - ($x$,$y$) are related by an unknown function. The goal is to estimate the unknown function $g(.)$ also known as a classifier function, such that $g(x) = f(x), \forall x$
+  - $$x \in R^{2}$$ is a vector - the of observed variables
+  - ($$x$$,$y$$) are related by an unknown function. The goal is to estimate the unknown function $$g(.)$$ also known as a classifier function, such that $$g(x) = f(x), \forall x$$
   
   ![Classification_Model](images/Classification_Model.jpg)
 
 ## 2.2. What does the Classifier Fucntion do?
 
-- Assuming we have a linearly separable $x$, the classifier function $g(.)$ implements decision rule
-  - Fitting a Straight Line to a given data set requires two parameters $(w_0 $ $and$  $w)$
-    - $w_0$ is the bias
+- Assuming we have a linearly separable $$x$$, the classifier function $$g(.)$$ implements decision rule
+  - Fitting a Straight Line to a given data set requires two parameters $$(w_0 $$ $$and$$  $$w)$$
+    - $$w_0$$ is the bias
       - It is the distance of the line from the origin
-    - $w$ is the weight
+    - $$w$$ is the weight
       - It is the orientation of the line
-    - Both $w_0$ and $w$ are called as _Model Parameters_
+    - Both $$w_0$$ and $$w$$ are called as _Model Parameters_
     - __*Fitting the Line*__: This decision doubary line is estimated in a iterative fashion
       - Using the errors that we are caulcualted after fitting a line in each iteration
       - This fitment is leart during the above iterative process
   - The decision rule divides the data space into two sub-spaces separating two classes using a boundary
-  - The distance of the boundary from the origin $= \frac{w_0}{\parallel w \parallel}$
-  - Distance of any point from the boundary $=d=\frac{g(x)}{\parallel w \parallel}$
+  - The distance of the boundary from the origin $$= \frac{w_0}{\parallel w \parallel}$$
+  - Distance of any point from the boundary $$=d=\frac{g(x)}{\parallel w \parallel}$$
   
   ![Classifier_Function](images/Classifier_Function.jpg)
 
@@ -152,11 +153,11 @@
 
 # 3. Linear Models for Classification
 
-- The goal of classification is to take a vector $x$ and assign it to one of the $N$ discrete $\mathbb{C}_n$, where $n=1,2,3,...,N$
+- The goal of classification is to take a vector $$x$$ and assign it to one of the $$N$$ discrete $$\mathbb{C}_n$$, where $$n=1,2,3,...,N$$
   - The classes are disjoint and an input is assigned to only one class
   - The input space is divided into _decision regions_
   - The boundaries are called a _decision boundaries or decision surfaces_
-  - In general, if the input space is $N$ dimensional, then $g(x)$ would define $N-1$ hyperplane
+  - In general, if the input space is $$N$$ dimensional, then $$g(x)$$ would define $$N-1$$ hyperplane
 
 ## 3.1. Geomentry of the Linear Discrimminant Function
 
@@ -166,45 +167,45 @@
 
 ### 3.2.1. D-Decision Boundary for OR Gate
 
-- The decision regions are separated by a hyperplane and it is defined by $g(x) - 0$.
-- This separates linearly separable classes $\mathbb{C}_1$ and $\mathbb{C}_2$
-- The $OR$ Gate _Truth Table_
+- The decision regions are separated by a hyperplane and it is defined by $$g(x) - 0$$.
+- This separates linearly separable classes $$\mathbb{C}_1$$ and $$\mathbb{C}_2$$
+- The $$OR$$ Gate _Truth Table_
 
-| $x_1$ | $x_2$ | y |
+| $$x_1$$ | $$x_2$$ | y |
 |-------|-------|---|
 | 0     | 0     | 0 |
 | 0     | 1     | 1 |
 | 1     | 0     | 1 |
 | 1     | 1     | 1 |
 
-- If any of the input feature $x_1$ or $x_2$ has 1, then result is $1$
+- If any of the input feature $$x_1$$ or $$x_2$$ has 1, then result is $$1$$
 - Below diagram depicts the boundary line for this OR gate
   ![1D_Decision_Boundary_For_OR_Gate](images/1D_Decision_Boundary_For_OR_Gate.jpg)
 
 ### 3.2.2. D-Decision Boundary for AND Gate
 
-- The decision regions are separated by a hyperplane and it is defined by $g(x) = 0$.
-- This separates linearly separable classes $\mathbb{C}_1$ and $\mathbb{C}_2$
-- The $AND$ Gate _Truth Table_
+- The decision regions are separated by a hyperplane and it is defined by $$g(x) = 0$$.
+- This separates linearly separable classes $$\mathbb{C}_1$$ and $$\mathbb{C}_2$$
+- The $$AND$$ Gate _Truth Table_
 
-| $x_1$ | $x_2$ | y |
+| $$x_1$$ | $$x_2$$ | y |
 |-------|-------|---|
 | 0     | 0     | 0 |
 | 0     | 1     | 0 |
 | 1     | 0     | 0 |
 | 1     | 1     | 1 |
 
-- We will have 1 only when both $x_1$ and $x_2$ are 1
-- The boundary line for this $AND$ gate will similar to the one below
+- We will have 1 only when both $$x_1$$ and $$x_2$$ are 1
+- The boundary line for this $$AND$$ gate will similar to the one below
 
   ![1D_Decision_Boundary_For_AND_Gate](images/1D_Decision_Boundary_For_AND_Gate.jpg)
 
 ### 3.2.3. Decision Boundary for Sentiments - NLP
 
 - The concept of decision boundary can be applied to NLP as well
-- Let us consider some positive and negative sentiment terms which are contained in two classes $\mathbb{C}_P$ and $\mathbb{C}_N$
-  - $\mathbb{C}_P = [\text{achieve efficient improve profitable}] = +1$
-  - $\mathbb{C}_N = [\text{termination penalties misconduct serious}] = -1$
+- Let us consider some positive and negative sentiment terms which are contained in two classes $$\mathbb{C}_P$$ and $$\mathbb{C}_N$$
+  - $$\mathbb{C}_P = [\text{achieve efficient improve profitable}] = +1$$
+  - $$\mathbb{C}_N = [\text{termination penalties misconduct serious}] = -1$$
   
   ![Decision_Boundary_For_Sentiments](images/Decision_Boundary_For_Sentiments.jpg)
   
@@ -212,19 +213,19 @@
   - Here inputs are texts
   - We need to transform the input for finding the decision boundary
 
-### 3.2.4. Decision Boundary - Variation of $W_J$
+### 3.2.4. Decision Boundary - Variation of $$W_J$$
 
-- The slope (weight) of the line is decided by varaition sof $W_J$
+- The slope (weight) of the line is decided by varaition sof $$W_J$$
   - During fitment of a line/ learning the model, the slope of the line need to be adjusted to have _line of fit_
-  - So, $W_J$ need to be adjustedbased on the errors calcualted after each iteration during fitment
+  - So, $$W_J$$ need to be adjustedbased on the errors calcualted after each iteration during fitment
 
   ![Decision_Boundary_Variation_of_W_J](images/Decision_Boundary_Variation_of_W_J.jpg)
 
 ### 3.2.5. Decision Boundary - Variation of Bias
 
-- The distance of the decision boundary from origin is decided by bias ($w_0$)
+- The distance of the decision boundary from origin is decided by bias ($$w_0$$)
   - During fitment, line/hyperplane need to be moved to have apprximate decision boundary which splits the input to decision regions
-  - So, bias $w_0$ also need to be variated during iterative process of learning/fitment
+  - So, bias $$w_0$$ also need to be variated during iterative process of learning/fitment
 - The contribution of bias to the creation of the decision boundary
 
   ![Decision_Boundary_Variation_of_Bias](images/Decision_Boundary_Variation_of_Bias.jpg)
@@ -233,18 +234,18 @@
 
 - Example showing the iterative process of fitting the line using _Gradient Descent_
   - Assume we have the following
-    - Input: 10 points are taken as input, shown in picture as $\perp$
+    - Input: 10 points are taken as input, shown in picture as $$\perp$$
     - Output: Assume output classes are well defined and well known
   - What we don't know is how to fit the line so that decision region(s) are created to each class
     - This fitment has to be learnt during the iterative process
 - Picture shows the fitment of line in 10 iterations
-  - Let $y$ be our target
-    - The green line which goes over $\perp$ in the left diagram
-  - let $\hat{y}$ is estimate
+  - Let $$y$$ be our target
+    - The green line which goes over $$\perp$$ in the left diagram
+  - let $$\hat{y}$$ is estimate
     - The first line is shown in blue color (parallel to x-axis)
-  - Goal is to have $y-\hat{y} \approx 0$
+  - Goal is to have $$y-\hat{y} \approx 0$$
     - That is the error should reach the _minima_, or no more change that can be brought to the model parameters, then we can stop the iteration
-  - In each iteration error $y-\hat{y}$ is calcualted and it is propogated back to the model and ask the model to learn the parameter ($w$ and $w_0$ keeps changing in each iteration)
+  - In each iteration error $$y-\hat{y}$$ is calcualted and it is propogated back to the model and ask the model to learn the parameter ($$w$$ and $$w_0$$ keeps changing in each iteration)
   
 Image 1             |  Image 2
 :-------------------------:|:-------------------------:
@@ -310,19 +311,19 @@ Image 1             |  Image 2
 ## 5.3. High-level view of Perceptron
 
 - An example perceptron having only one element to linearly classify set of vectors to two regions
-- $x_1, x_2, ..., x_n$ are called _inputs_ or _feature vectors_, connected to the perceptron using weights $w_1, w_2, ..., w_n$
+- $$x_1, x_2, ..., x_n$$ are called _inputs_ or _feature vectors_, connected to the perceptron using weights $$w_1, w_2, ..., w_n$$
   - The input could be
   - Any real values
   - Or a Ont-Hot Encoded Vectors in case of NLP
-- $+1$ is the bias, connected to the preceptron using weight $w_0$
-- $\hat{y}$ is the output is going to be two values
-  - $\{-1,+1\}$ depending on value of activation function
+- $$+1$$ is the bias, connected to the preceptron using weight $$w_0$$
+- $$\hat{y}$$ is the output is going to be two values
+  - $$\{-1,+1\}$$ depending on value of activation function
 - For the sake of explanation, perceptron is shown as _Activation Function_ and _Decision Function_
   - Activation Function
   - Once the values are received, they are linearly sum'ed
-  - We will have value, for example between $[-5,+5]$ depending on the weights that are connecting the neuron
-  - Activation Function value need to translated into a real value range $[0,1]$ or $[-1,+1]$ or using some probability distribution, where sum of all values equal 1 $\sum [0..1] = 1$
-  - What Activation fundion does is, it smashes/squashes the calculated neuron value into new space $[0,1]$
+  - We will have value, for example between $$[-5,+5]$$ depending on the weights that are connecting the neuron
+  - Activation Function value need to translated into a real value range $$[0,1]$$ or $$[-1,+1]$$ or using some probability distribution, where sum of all values equal 1 $$\sum [0..1] = 1$$
+  - What Activation fundion does is, it smashes/squashes the calculated neuron value into new space $$[0,1]$$
   - Decision Function
   - Translates the _Activation Function_ value into two different values using some __*threshold*__
 
@@ -336,75 +337,75 @@ Image 1             |  Image 2
   - Weights are the model parameters.
   - So, it needs to learn the weigths
 - They are adjsuted until the output is consistent with the target output in the training examples
-- Let $k$ be the number of iterations went through in perceptron learning process so far
-  - So we will have $w^1, w^2, ..., w^k$ weights learned in each iteration
-- $w^{k+1} \propto (y - \hat{y})$
-  - The new weight $w^{k+1}$ is proportional to the errors $(y - \hat{y})$ that were computed
-  - $y$ is actual target of the training data
-  - $\hat{y}$ is the estimated output
+- Let $$k$$ be the number of iterations went through in perceptron learning process so far
+  - So we will have $$w^1, w^2, ..., w^k$$ weights learned in each iteration
+- $$w^{k+1} \propto (y - \hat{y})$$
+  - The new weight $$w^{k+1}$$ is proportional to the errors $$(y - \hat{y})$$ that were computed
+  - $$y$$ is actual target of the training data
+  - $$\hat{y}$$ is the estimated output
 - The weights are updated as below
-  - $w^{k+1}_j = w^{(k)}_j - \eta(y_i - \hat{y}^{(k)})x_{ij}$
+  - $$w^{k+1}_j = w^{(k)}_j - \eta(y_i - \hat{y}^{(k)})x_{ij}$$
   - where
-    - $w^{(k)}$ is the weight parameter associated with the $i^{th}$ input at $k^{th}$ iteration
-    - $\eta$ is the learning parameter
+    - $$w^{(k)}$$ is the weight parameter associated with the $$i^{th}$$ input at $$k^{th}$$ iteration
+    - $$\eta$$ is the learning parameter
     - It is the step size, helping in how to descent, to find target output
-      - If $\eta$ value is very high, the learning jumps
-      - If $\eta$ value is very small, it slowly and steadly reaches the target output
-      - This $\eta$ value will be decided/adjusted based on
+      - If $$\eta$$ value is very high, the learning jumps
+      - If $$\eta$$ value is very small, it slowly and steadly reaches the target output
+      - This $$\eta$$ value will be decided/adjusted based on
       - Input features
       - Training samples
       - How weights are adjusted in each iteration
       - How the errors are jumped from one point to the other in each iteration
-      - This $\eta$ parameter is updated based on the experienced that we gain on model estimation
-    - Normally it ranges from $[0.1, 0.01]$
-    - $x_{ij}$ is the $j^{th}$ attribute of the $i^{th}$ training sample
-  - The new weight $w^{k+1}_j$ is given by old weight $w^{(k)}_j$, learning parameter $\eta$, the error $(y - \hat{y})$ and the input parameter $x_{ij}$
-- If $(y - \hat{y}) \approx 0$, no prediction error
-  - Normmaly it will be set to $1.e-5$
+      - This $$\eta$$ parameter is updated based on the experienced that we gain on model estimation
+    - Normally it ranges from $$[0.1, 0.01]$$
+    - $$x_{ij}$$ is the $$j^{th}$$ attribute of the $$i^{th}$$ training sample
+  - The new weight $$w^{k+1}_j$$ is given by old weight $$w^{(k)}_j$$, learning parameter $$\eta$$, the error $$(y - \hat{y})$$ and the input parameter $$x_{ij}$$
+- If $$(y - \hat{y}) \approx 0$$, no prediction error
+  - Normmaly it will be set to $$1.e-5$$
 - During the training the weights contributing most to the error require adjustments
 
 ### 5.4.1. Exercise - 1
 
 - Lets suppose
   - Target output is
-  - $y = 1$
+  - $$y = 1$$
   - The Estimated output is
-  - $\hat{y} = -1$
-- How will you update $w$?
-- What kind of adjustment you will make to $w$ so that $\hat{y}$ becomes closer to $y$?
+  - $$\hat{y} = -1$$
+- How will you update $$w$$?
+- What kind of adjustment you will make to $$w$$ so that $$\hat{y}$$ becomes closer to $$y$$?
 
 - Refer some books and figure out what could the adjsutments that we can make?
-  - Hint: $w^{k+1} \propto (y - \hat{y})$
+  - Hint: $$w^{k+1} \propto (y - \hat{y})$$
 
 ### 5.4.2. Exercise - 2
 
 - Same of Exercise 3, but
-  - $y = -1$
-  - $\hat{y} = 1$
+  - $$y = -1$$
+  - $$\hat{y} = 1$$
 - In which way you would adjust the weights?
   - Either you will increase the weight or you will decrease the weight?
 
 ## 5.5. Algorithm for Perceptron Learning
 
-1. Total number of input vectors = $k$
-2. Total number of features = $n$ (for each vector)
-3. Learning parameter $\eta = 0.001$, where $0 < \eta < 1$
-4. $epoch^1$ count $t = 1$, $j = 1$
-5. Initialize weights $w_i$ with random numbers
-6. Initialize the input layer with $\vec{x_j}$
-7. Calculate the output using $\sum w_i x_i + w_0$
-8. Calculate the error $(y- \hat{y})$
-9. Update the weights $w_j(t + 1) = w_j - \eta(y-\hat{y})x_j$
-10. Repeat steps 7 to 9 until: the error is less than $\theta$ (the given threshold) or a predetermined number of $epochs$ have been compled
+1. Total number of input vectors = $$k$$
+2. Total number of features = $$n$$ (for each vector)
+3. Learning parameter $$\eta = 0.001$$, where $$0 < \eta < 1$$
+4. $$epoch^1$$ count $$t = 1$$, $$j = 1$$
+5. Initialize weights $$w_i$$ with random numbers
+6. Initialize the input layer with $$\vec{x_j}$$
+7. Calculate the output using $$\sum w_i x_i + w_0$$
+8. Calculate the error $$(y- \hat{y})$$
+9. Update the weights $$w_j(t + 1) = w_j - \eta(y-\hat{y})x_j$$
+10. Repeat steps 7 to 9 until: the error is less than $$\theta$$ (the given threshold) or a predetermined number of $$epochs$$ have been compled
 
-$^1$An epoch is one complete presentation of the data set to be learned to a learning machine
+$$^1$An epoch is one complete presentation of the data set to be learned to a learning machine
 
 ![Algorithm_for_Perceptron_Learning](images/Algorithm_for_Perceptron_Learning.jpg)
 
 ### 5.5.1. Exercise
 
 - From Algorithm for Perceptron Learning
-  - To provide a stable weight update for this step, $w_j(t + 1) = w_j - \eta(y-\hat{y})x_j$, we require a small $\eta$. This results in slow learning. Bigger $\eta$ would be good for fast learning.
+  - To provide a stable weight update for this step, $$w_j(t + 1) = w_j - \eta(y-\hat{y})x_j$$, we require a small $$\eta$$. This results in slow learning. Bigger $$\eta$$ would be good for fast learning.
   - What are the problems?
   - What is the compromise?
 
@@ -412,7 +413,7 @@ $^1$An epoch is one complete presentation of the data set to be learned to a lea
 
 - You will be able to classify objects that are in linear space
   - It is __*mandatory*__, that the objects that we are going to classify should be __*linearly separable*__ ![Perceptron_Linearly_Separable_Requirement](images/Perceptron_Linearly_Separable_Requirement.jpg)
-- Perceptron will contain __*only one neuron*__, even though we have $n$ number of neurons in input layer
+- Perceptron will contain __*only one neuron*__, even though we have $$n$$ number of neurons in input layer
   - Input layer neurons just pass on the value to the perceptron
   - The computation will happen only in Perceptron
 
@@ -421,9 +422,9 @@ $^1$An epoch is one complete presentation of the data set to be learned to a lea
 ### 5.7.1. Logical AND
 
 - Here for demonstration purpose, below values has been set to:
-  - $b = -1, w_0 = -1$
-  - $w_1 = +1$ for $x_1$
-  - $w_2 = +1$ for $x_2$
+  - $$b = -1, w_0 = -1$$
+  - $$w_1 = +1$$ for $$x_1$$
+  - $$w_2 = +1$$ for $$x_2$$
 - With above learnt model parameters, it is evident that Perceptron able to classify the linearly separable objects
 
 ![Perceptron_Learning_Logical_AND](images/Perceptron_Learning_Logical_AND.jpg)
@@ -431,9 +432,9 @@ $^1$An epoch is one complete presentation of the data set to be learned to a lea
 ### 5.7.2. Logical OR
 
 - Here for demonstration purpose, below values has been set to:
-  - $b = +1, w_0 = 0$
-  - $w_1 = +1$ for $x_1$
-  - $w_2 = +1$ for $x_2$
+  - $$b = +1, w_0 = 0$$
+  - $$w_1 = +1$$ for $$x_1$$
+  - $$w_2 = +1$$ for $$x_2$$
 - With above learnt model parameters, it is evident that Perceptron able to classify the linearly separable objects
 
 ![Perceptron_Learning_Logical_OR](images/Perceptron_Learning_Logical_OR.jpg)
@@ -525,7 +526,7 @@ print(sentiment) # 0
 
 ## 5.9. Perceptron Learning through EPOCH count
 
-- When we do the iteration through the $epoch$ count
+- When we do the iteration through the $$epoch$$ count
   - we can find that the _decision boundary_ keep shifting between values
   
   Image 1             |  Image 2
@@ -568,7 +569,7 @@ print(sentiment) # 0
 - Input space is transformed into hidden space
 - Hidden layer represents the input layer
 - Learns automatically the input representation and patterns
-- $(0,1)$ and $(1,0)$ are merged into one in the $h$-space
+- $$(0,1)$$ and $$(1,0)$$ are merged into one in the $$h$$-space
 - Patterns yielding similar results are merged into one
 - Dimensionality reduction
 
