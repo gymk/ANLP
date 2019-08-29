@@ -1,17 +1,17 @@
-# 1. ANLP
+# 1. Applied Natural Language Processing Course by NPTEL
 <!-- TOC -->
 
-- [1. ANLP](#1-anlp)
-- [2. COURSE LAYOUT](#2-course-layout)
-  - [2.1. COURSE TYPE](#21-course-type)
-  - [2.2. COURSE LEVEL](#22-course-level)
-- [3. BOOKS AND REFERENCES](#3-books-and-references)
-  - [3.1. Books](#31-books)
-  - [3.2. Articles](#32-articles)
-  - [3.3. Proceedings](#33-proceedings)
-- [4. Code](#4-code)
-  - [4.1. Week 1](#41-week-1)
-  - [4.2. Week 2](#42-week-2)
+- [1. Applied Natural Language Processing Course by NPTEL](#1-applied-natural-language-processing-course-by-nptel)
+  - [1.1. COURSE LAYOUT](#11-course-layout)
+    - [1.1.1. COURSE TYPE](#111-course-type)
+    - [1.1.2. COURSE LEVEL](#112-course-level)
+  - [1.2. BOOKS AND REFERENCES](#12-books-and-references)
+    - [1.2.1. Books](#121-books)
+    - [1.2.2. Articles](#122-articles)
+    - [1.2.3. Proceedings](#123-proceedings)
+  - [1.3. Code](#13-code)
+    - [1.3.1. Week 1](#131-week-1)
+    - [1.3.2. Week 2](#132-week-2)
 
 <!-- /TOC -->
 
@@ -31,7 +31,7 @@ __PER-REQUISITES: Essential__ – Algorithms, Python proficiency, elementary pro
 
 __NOTE__: Only English corpus is considered throughout this course.
 
-# 2. COURSE LAYOUT
+## 1.1. COURSE LAYOUT
 
 - WEEK 1:   Introduction, terminologies, empirical rules
 - WEEK 2:   Word to Vectors
@@ -46,17 +46,17 @@ __NOTE__: Only English corpus is considered throughout this course.
 - WEEK 11: Information Retrieval tasks using Neural Networks- Learn to Rank, Understanding Phrases, analogies
 - WEEK 12: Spelling Correction using traditional and Neural networks, end notes
 
-## 2.1. COURSE TYPE
+### 1.1.1. COURSE TYPE
 
 - Elective
 
-## 2.2. COURSE LEVEL
+### 1.1.2. COURSE LEVEL
 
 - Postgraduate
 
-# 3. BOOKS AND REFERENCES
+## 1.2. BOOKS AND REFERENCES
 
-## 3.1. Books
+### 1.2.1. Books
 
 1. Niladri Sekhar Dash and S. Arulmozi, Features of a Corpus. Singapore: Springer Singapore, 2018, pp. 17–34. isbn: 978-981-10-7458-5. doi: 10.1007/978- 981- 10- 7458- 5_2, url: <https://doi.org/10.1007/978981-10-7458-5_2>.
 2. Ian Goodfellow, Yoshua Bengio, and Aaron Courville, Deep Learning, <http://www.deeplearningbook.org>. MIT Press, 2016.
@@ -67,7 +67,7 @@ __NOTE__: Only English corpus is considered throughout this course.
 7. Jacob Perkins, "Python 3 text processing with NLTK 3 cookbook," Packt Publishing Ltd, 2014.
 8. Noah A. Smith, "Linguistic Structure Prediction. Synthesis Lectures on Human Language Technologies," Morgan and Claypool, May 2011.
 
-## 3.2. Articles
+### 1.2.2. Articles
 
 1. Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio. “Neural machine translation by jointly learning to align and translate”. English (US). In: arXiv (2014).
 2. Yoshua Bengio et al. “A Neural Probabilistic Language Model”. In: Journal of Machine Learning Research 3 (Mar. 2003), pp. 1137–1155. issn:1532-4435. 
@@ -85,10 +85,10 @@ __NOTE__: Only English corpus is considered throughout this course.
 14. Tomas Mikolov et al. “Efficient Estimation of Word Representations in Vector Space”. In: CoRR abs/1301.3781 (2013). 
 15. Franz Josef Och and Hermann Ney. “The Alignment Template Approach to Statistical Machine Translation”. In: Computational Linguistics 30.4 (Dec. 2004), pp. 417–449. issn: 0891-2017. 
 16. F. Pedregosa et al. “Scikit-learn: Machine Learning in Python”. In: Journal of Machine Learning Research 12 (2011), pp. 2825–2830.
-17. Xin Rong. “word2vec Parameter Learning Explained”. In: CoRR abs/1411.2738 (2014). arXiv: 1411.2738. url: http://arxiv.org/abs/1411.2738.
+17. Xin Rong. “word2vec Parameter Learning Explained”. In: CoRR abs/1411.2738 (2014). arXiv: 1411.2738. url: <http://arxiv.org/abs/1411.2738>.
 18. Fraser W. Smith and Lars Muckli. “Nonstimulated early visual areas carry information about surrounding context”. In: Proceedings of the National Academy of Sciences 107.46 (2010), pp. 20099–20103.
 
-## 3.3. Proceedings
+### 1.2.3. Proceedings
 
 1. Kyunghyun Cho et al. “Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation”. In: Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP). Doha, Qatar: Association for Computational Linguistics, Oct. 2014, pp. 1724–1734.
 2. Rafal Jozefowicz, Wojciech Zaremba, and Ilya Sutskever. “An Empirical Exploration of Recurrent Network Architectures”. In: Proceedings of the 32Nd International Conference on International Conference on Machine Learning - Volume 37. ICML’15. Lille, France: JMLR.org, 2015, pp. 2342–2350. 
@@ -101,9 +101,9 @@ __NOTE__: Only English corpus is considered throughout this course.
 
 ----
 
-# 4. Code
+## 1.3. Code
 
-## 4.1. Week 1
+### 1.3.1. Week 1
 
 | S.I |                 File                 |          Details          |
 |-----|:------------------------------------:|:-------------------------:|
@@ -111,7 +111,7 @@ __NOTE__: Only English corpus is considered throughout this course.
 
 ----
 
-## 4.2. Week 2
+### 1.3.2. Week 2
 
 | S.I |                 File                 |          Details          |
 |-----|:------------------------------------:|:-------------------------:|
