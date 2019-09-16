@@ -17,6 +17,8 @@
 
 <!-- /TOC -->
 
+https://hackersandslackers.com/
+
 Applied Natural Language Processing course code(s)
 
 ANLP Course by Mr.Ramaseshan R, Chennai Mathematical Institute
