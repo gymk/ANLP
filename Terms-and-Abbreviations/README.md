@@ -2,6 +2,8 @@
 
 Refer IPython notes in this folder for categorized list
 
+[Jupyter Notebook Viewer (nbviewer) link to browse the notebooks](https://nbviewer.jupyter.org/github/gymk/ANLP/tree/master/)
+
 - [References](https://nbviewer.jupyter.org/github/gymk/ANLP/blob/master/Terms-and-Abbreviations/References.ipynb)
 - [Terms_And_Abbreviations](https://nbviewer.jupyter.org/github/gymk/ANLP/blob/master/Terms-and-Abbreviations/Terms_And_Abbreviations.ipynb)
 

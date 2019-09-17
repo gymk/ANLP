@@ -1,4 +1,6 @@
 ﻿[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gymk/ANLP/) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/gymk/ANLP/master)
+ 
+ [Jupyter Notebook Viewer (nbviewer) link to browse the notebooks](https://nbviewer.jupyter.org/github/gymk/ANLP/tree/master/)
 
 # 1. Applied Natural Language Processing Course by NPTEL
 <!-- TOC -->
