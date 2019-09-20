@@ -28,6 +28,10 @@ Refer IPython notes in this folder for categorized list
     - [RNN-in-NLP](https://nbviewer.jupyter.org/github/gymk/ANLP/blob/master/Terms-and-Abbreviations/RNN-in-NLP.ipynb)
     - [RNN_Based_Language_Model](https://nbviewer.jupyter.org/github/gymk/ANLP/blob/master/Terms-and-Abbreviations/RNN_Based_Language_Model.ipynb)
     - [BPTT-RNN_Backpropagation_Through_Time](https://nbviewer.jupyter.org/github/gymk/ANLP/blob/master/Terms-and-Abbreviations/RNN_Backpropagation_Through_Time.ipynb)
+  - LSTM (Long Short Term Memory)
+    - [LSTM](https://nbviewer.jupyter.org/github/gymk/ANLP/blob/master/Terms-and-Abbreviations/LSTM.ipynb)
+    - [RNN_LSTM_TBPTT](https://nbviewer.jupyter.org/github/gymk/ANLP/blob/master/Terms-and-Abbreviations/RNN_LSTM_TBPTT.ipynb)
+    - [RNN_GRU](https://nbviewer.jupyter.org/github/gymk/ANLP/blob/master/Terms-and-Abbreviations/RNN_GRU.ipynb)
   - [Convolutional-Neural-Network](https://nbviewer.jupyter.org/github/gymk/ANLP/blob/master/Terms-and-Abbreviations/Convolutional-Neural-Network.ipynb)
 
 
