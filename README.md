@@ -60,6 +60,11 @@ __NOTE__: Only English corpus is considered throughout this course.
 
 - Postgraduate
 
+## YouTube Video Link
+
+- https://www.youtube.com/playlist?list=PLyqSpQzTE6M_EcNgdZ2qOtTZe7YI4Eedb
+  - Video Playlist
+
 ## 1.2. BOOKS AND REFERENCES
 
 ### 1.2.1. Books
